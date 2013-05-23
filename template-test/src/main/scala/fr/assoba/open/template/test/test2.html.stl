@@ -1,0 +1,11 @@
+@(title: String)
+@import fr.assoba.open.template.test.TestTemplates
+
+<html>
+    <head>@title</head>
+    <body>
+    @{
+        TestTemplates.f
+    }
+    </body>
+</html>

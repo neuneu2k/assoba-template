@@ -1,0 +1,5 @@
+package fr.assoba.open.template.test;
+
+public class @{"ClassName"}{
+        @{(1 to 100)}
+}

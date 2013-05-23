@@ -15,19 +15,36 @@
   ~    limitations under the License.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>fr.assoba.open</groupId>
     <artifactId>template-parent</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
     <modules>
         <module>assoba-template-api</module>
         <module>template-maven-plugin</module>
         <module>template-test</module>
     </modules>
     <packaging>pom</packaging>
+    <name>Assoba template engine parent pom</name>
+    <description>Assoba template engine parent pom</description>
+    <url>https://github.com/neuneu2k/assoba-template</url>
+
+    <scm>
+        <connection>scm:git:git@github.com:neuneu2k/assoba-template.git</connection>
+        <developerConnection>scm:git:git@github.com:neuneu2k/assoba-template.git</developerConnection>
+        <url>https://github.com/neuneu2k/assoba-template</url>
+    </scm>
+
+    <issueManagement>
+        <url>https://github.com/neuneu2k/assoba-template/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
 
     <licenses>
         <license>
@@ -44,5 +61,55 @@
             <email>jpujo@assoba.fr</email>
         </developer>
     </developers>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.8.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <docfilessubdirs>true</docfilessubdirs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <!-- explicitly define maven-deploy-plugin after other to force exec
+                    order -->
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+                <executions>
+                    <execution>
+                        <id>deploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>

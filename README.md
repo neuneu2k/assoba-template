@@ -63,4 +63,7 @@ Template syntax documented in the [play2 documentation](http://www.playframework
 
 Both m2eclipse and IDEA should detect the generated-sources automatically
 
+Credits
+-------
 
+All credits are to go to the Play developers who devised the template language and provided its implementation!

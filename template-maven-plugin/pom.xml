@@ -15,17 +15,16 @@
   ~    limitations under the License.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>template-parent</artifactId>
         <groupId>fr.assoba.open</groupId>
         <version>1.0</version>
     </parent>
-
     <artifactId>template-maven-plugin</artifactId>
+    <name>template-maven-plugin</name>
+    <packaging>maven-plugin</packaging>
 
     <description>Fork of Play 2 template engine, as a maven plugin, for Scala 2.10 and without any SBT dependency
     </description>

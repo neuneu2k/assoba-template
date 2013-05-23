@@ -29,34 +29,34 @@ How to use it ?
 ---------------
 
 Include the following tiny runtime dependency in the project that will use templates.
-
-    <dependency>
-            <groupId>fr.assoba.open</groupId>
-            <artifactId>assoba-template-api</artifactId>
-            <version>1.0</version>
-    </dependency>
-
-Add the following plugin to the build>plugins section in your pom
-
-    <plugin>
+```xml
+<dependency>
         <groupId>fr.assoba.open</groupId>
-        <artifactId>template-maven-plugin</artifactId>
-        <version>1.0-SNAPSHOT</version>
-        <executions>
-            <execution>
-                <goals>
-                    <goal>compile</goal>
-                </goals>
-            </execution>
-        </executions>
-    </plugin>
-
+        <artifactId>assoba-template-api</artifactId>
+        <version>1.0</version>
+</dependency>
+```
+Add the following plugin to the build>plugins section in your pom
+```xml
+<plugin>
+    <groupId>fr.assoba.open</groupId>
+    <artifactId>template-maven-plugin</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>compile</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+```
 Put your templates beside your scala code in src/main/scala,
 
 templates should be named
-    [CLASSNAME].stl
+    ***[CLASSNAME].stl***
 for generic templates and
-    [CLASSNAME].html.stl
+    ***[CLASSNAME].html.stl***
 for html templates (with play2 escaping rules)
 
 Template syntax documented in the [play2 documentation](http://www.playframework.com/documentation/2.1.1/ScalaTemplates)

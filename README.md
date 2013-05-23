@@ -51,7 +51,8 @@ Add the following plugin to the build>plugins section in your pom
         </executions>
     </plugin>
 
-Put your templates beside your scala code in src/main/scala
+Put your templates beside your scala code in src/main/scala,
+templates should be named [CLASSNAME].stl for generic templates and [CLASSNAME].html.stl for html templates (with play2 escaping rules)
 
 Both m2eclipse and IDEA should detect the generated-sources automatically
 

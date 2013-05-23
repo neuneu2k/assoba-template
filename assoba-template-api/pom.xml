@@ -20,7 +20,7 @@
     <parent>
         <groupId>fr.assoba.open</groupId>
         <artifactId>template-parent</artifactId>
-        <version>1.0</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
     <packaging>jar</packaging>
     <artifactId>assoba-template-api</artifactId>

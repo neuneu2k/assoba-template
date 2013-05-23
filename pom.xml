@@ -36,8 +36,8 @@
     <url>https://github.com/neuneu2k/assoba-template</url>
 
     <scm>
-        <connection>scm:git:git@github.com:neuneu2k/assoba-template.git</connection>
-        <developerConnection>scm:git:git@github.com:neuneu2k/assoba-template.git</developerConnection>
+        <connection>scm:git:ssh://github.com/neuneu2k/assoba-template.git</connection>
+        <developerConnection>scm:git:ssh://github.com/neuneu2k/assoba-template.git</developerConnection>
         <url>https://github.com/neuneu2k/assoba-template</url>
     </scm>
 
@@ -64,6 +64,20 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <artifactId>maven-source-plugin</artifactId>
                 <version>2.2</version>

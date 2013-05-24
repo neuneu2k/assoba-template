@@ -41,7 +41,7 @@ Add the following plugin to the build>plugins section in your pom
 <plugin>
     <groupId>fr.assoba.open</groupId>
     <artifactId>template-maven-plugin</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <executions>
         <execution>
             <goals>

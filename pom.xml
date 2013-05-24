@@ -19,7 +19,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>fr.assoba.open</groupId>
     <artifactId>template-parent</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>

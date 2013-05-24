@@ -21,7 +21,7 @@
     <parent>
         <artifactId>template-parent</artifactId>
         <groupId>fr.assoba.open</groupId>
-        <version>1.0</version>
+        <version>1.1-SNAPSHOT</version>
     </parent>
     <artifactId>template-test</artifactId>
     <name>template-test</name>
@@ -48,7 +48,7 @@
             <plugin>
                 <groupId>fr.assoba.open</groupId>
                 <artifactId>template-maven-plugin</artifactId>
-                <version>1.0</version>
+                <version>1.1-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <goals>
@@ -132,7 +132,7 @@
         <dependency>
             <groupId>fr.assoba.open</groupId>
             <artifactId>assoba-template-api</artifactId>
-            <version>1.0</version>
+            <version>1.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
